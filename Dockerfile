@@ -1,3 +1,3 @@
-FROM registry.access.redhat.com/jboss-eap-6/eap64-openshift
+FROM containers.cisco.com/sasharm4/eap64
 EXPOSE 8080 8888
-RUN curl https://raw.githubusercontent.com/VeerMuchandi/ps/master/deployments/ROOT.war -o $JBOSS_HOME/standalone/deployments/ROOT.war
+RUN curl http://laerep-prod2-01/repo/ose3/mongoapp.war -o $JBOSS_HOME/standalone/deployments/ROOT.war
